@@ -1,0 +1,8 @@
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/kis87988/ohmyzsh.git
+	branch = william_custom
+[submodule ".oh-my-bash"]
+	path = .oh-my-bash
+	url = https://github.com/kis87988/oh-my-bash.git
+	branch = william_custom
