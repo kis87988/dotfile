@@ -1,8 +1,9 @@
+WORKDIR=$HOME
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$WORKDIR/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=${HOME}/.oh-my-zsh
+export ZSH=$WORKDIR/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -55,10 +56,10 @@ ZSH_THEME="william"
 
 source $ZSH/oh-my-zsh.sh
 
-[ -f "$HOME"/.utils ] && . "$HOME"/.utils
+[ -f "$WORKDIR"/.utils ] && . "$WORKDIR"/.utils
 
 # include .local if it exists
-[ -f "$HOME"/.local ] && . "$HOME"/.local
+[ -f "$WORKDIR"/.local ] && . "$WORKDIR"/.local
 
 # fzf command
-[ -f "$HOME"/.fzf.zsh ] && . "$HOME"/.fzf.zsh
+[ -f "$WORKDIR"/.fzf.zsh ] && . "$WORKDIR"/.fzf.zsh

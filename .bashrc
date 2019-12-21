@@ -1,6 +1,6 @@
-HOME=$(pwd)
+WORKDIR=$HOME
 # Path to your oh-my-bash installation.
-export OSH=$HOME/.oh-my-bash
+export OSH=$WORKDIR/.oh-my-bash
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
@@ -152,10 +152,10 @@ source $OSH/oh-my-bash.sh
 #   exec zsh
 # fi
 
-[ -f "$HOME"/.utils ] && source "$HOME"/.utils
+[ -f "$WORKDIR"/.utils ] && source "$WORKDIR"/.utils
 
 # include .local if it exists
-[ -f "$HOME"/.local ] && . "$HOME"/.local
+[ -f "$WORKDIR"/.local ] && . "$WORKDIR"/.local
 
 # fzf setup
-[ -f "$HOME"/.fzf.bash ] && source "$HOME"/.fzf.bash
+[ -f "$WORKDIR"/.fzf.bash ] && source "$WORKDIR"/.fzf.bash
