@@ -55,10 +55,10 @@ ZSH_THEME="william"
 
 source $ZSH/oh-my-zsh.sh
 
-[ -f ~/.utils ] && source ~/.utils
+[ -f "$HOME"/.utils ] && . "$HOME"/.utils
 
 # include .local if it exists
-[ -f $HOME/.local ] && . $HOME/.local
+[ -f "$HOME"/.local ] && . "$HOME"/.local
 
 # fzf command
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "$HOME"/.fzf.zsh ] && . "$HOME"/.fzf.zsh

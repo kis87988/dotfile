@@ -1,3 +1,4 @@
+HOME=$(pwd)
 # Path to your oh-my-bash installation.
 export OSH=$HOME/.oh-my-bash
 
@@ -151,10 +152,10 @@ source $OSH/oh-my-bash.sh
 #   exec zsh
 # fi
 
-[ -f ~/.utils ] && source ~/.utils
+[ -f "$HOME"/.utils ] && source "$HOME"/.utils
 
 # include .local if it exists
-[ -f $HOME/.local ] && . $HOME/.local
+[ -f "$HOME"/.local ] && . "$HOME"/.local
 
 # fzf setup
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f "$HOME"/.fzf.bash ] && source "$HOME"/.fzf.bash
