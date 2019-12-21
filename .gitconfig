@@ -1,0 +1,11 @@
+[pager]
+	branch = false
+	diff = false
+[core]
+	fileMode = false
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[push]
+	default = simple
