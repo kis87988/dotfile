@@ -15,6 +15,7 @@ mv --backup=t ~/.utils ~/.utils."$NOW"
 mv --backup=t ~/.aliases ~/.aliases."$NOW"
 mv --backup=t ~/.tmux.conf ~/.tmux.conf."$NOW"
 mv --backup=t ~/.gitconfig ~/.gitconfig."$NOW"
+mv --backup=t ~/.pylintrc ~/.pylintrc."$NOW"
 mv --backup=t ~/.oh-my-zsh ~/.oh-my-zsh."$NOW"
 mv --backup=t ~/.oh-my-bash ~/.oh-my-bash."$NOW"
 
@@ -26,6 +27,7 @@ ln -s "${PWD}"/.utils ~/.utils
 ln -s "${PWD}"/.aliases ~/.aliases
 ln -s "${PWD}"/.tmux.conf ~/.tmux.conf
 ln -s "${PWD}"/.gitconfig ~/.gitconfig
+ln -s "${PWD}"/.pylintrc ~/.pylintrc
 ln -s "${PWD}"/.oh-my-zsh ~/.oh-my-zsh
 ln -s "${PWD}"/.oh-my-bash ~/.oh-my-bash
 touch ~/.local
