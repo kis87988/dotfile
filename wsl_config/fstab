@@ -1,0 +1,2 @@
+LABEL=cloudimg-rootfs	/	 ext4	defaults	0 0
+D:  /mnt/d  drvfs metadata,umask=22,fmask=11,uid=1000,gid=0  0 0

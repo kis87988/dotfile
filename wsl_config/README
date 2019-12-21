@@ -1,0 +1,3 @@
+using fstab and wsl.conf to mount the sdcard
+before everything, if want to mound should do `sudo mount -t drvfs D: /mnt/d
+[option]`
