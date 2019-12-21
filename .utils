@@ -1,0 +1,105 @@
+# User configuration
+# 
+# export MANPATH="/usr/local/man:$MANPATH"
+# 
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+# export LANGAGE=zh_TW.UTF-8
+# export LC_ALL='en_GB.UTF-8'
+# export LANG='en_GB.UTF-8'
+# export LC_CTYPE=zh_TW.UTF-8 # Enter input UTF-8 Chinese 
+# export LC_MESSAGES=zh_TW.UTF-8 # show UTF-8 Chinese
+# export LC_TIME=en_US.UTF-8 # US date format
+# 
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+# 
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+# 
+# -----------------------
+# SSH KEY PATH
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+#
+# -----------------------
+# Umask
+#
+# /etc/profile sets 022, removing write perms to group + others.
+# Set a more restrictive umask: i.e. no exec perms for others:
+# umask 027
+# Paranoid: neither group nor others have any perms:
+# umask 077
+# -----------------------
+# WSL umask setting
+# Note: Bash on Windows does not currently apply umask properly.
+if [ "$(umask)" = "0000" ]; then
+	umask 022
+fi
+# 
+# -----------------------
+# Aliases
+# Set personal aliases, overriding those provided by oh-my-bash libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-bash
+# users are encouraged to define aliases within the OSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias bashconfig="mate ~/.bashrc"
+# alias ohmybash="mate ~/.oh-my-bash"
+#
+# Bash
+# Some people use a different file for aliases
+# if [ -f "${HOME}/.bash_aliases" ]; then
+#   source "${HOME}/.bash_aliases"
+# fi
+#
+# Zsh
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+[ -f ~/.aliases ] && source ~/.aliases
+# 
+# -----------------------
+# emulate command
+# emulate sh
+# emulate zsh
+# 
+# -----------------------
+# If not running interactively, don't do anything
+[[ "$-" != *i* ]] && return
+# 
+# -----------------------
+# added by Anaconda3 2019.03 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '${HOME}/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "${HOME}/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "${HOME}/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="${HOME}/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+# 
+# -----------------------
+# nvm script
+nvm() {
+    echo "🚨  NVM not loaded! Loading now..."
+    unset -f nvm
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    nvm "$@"
+}
