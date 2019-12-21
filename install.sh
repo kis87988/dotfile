@@ -32,4 +32,4 @@ ln -s "${PWD}"/.oh-my-zsh ~/.oh-my-zsh
 ln -s "${PWD}"/.oh-my-bash ~/.oh-my-bash
 touch ~/.local
 
-echo -e "Run the following command to complete installation:\nsource ~/.bash_profile"
+echo -e "installation completed"
