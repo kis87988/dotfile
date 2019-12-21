@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 WORKDIR=$HOME
 # If you come from bash you might have to change your $PATH.
 # export PATH=$WORKDIR/bin:/usr/local/bin:$PATH

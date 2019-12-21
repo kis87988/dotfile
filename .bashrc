@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 WORKDIR=$HOME
 # Path to your oh-my-bash installation.
 export OSH=$WORKDIR/.oh-my-bash
