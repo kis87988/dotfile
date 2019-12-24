@@ -58,7 +58,7 @@ ZSH_THEME="william"
 
 source $ZSH/oh-my-zsh.sh
 
-[ -f "$WORKDIR"/.utils ] && . "$WORKDIR"/.utils
+[ -f "$WORKDIR"/.userconfig ] && . "$WORKDIR"/.userconfig
 
 # include .local if it exists
 [ -f "$WORKDIR"/.local ] && . "$WORKDIR"/.local

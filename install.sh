@@ -1,28 +1,5 @@
 #!/usr/bin/env bash
 
-cd "${0%/*}"
+./install/install_dotfiles.sh
 
-# Move and save existing configs
-NOW=$(date "+%Y%m%d%H%M%S")
-
-git submodule update --init
-git submodule update --remote
-
-files=(".bashrc" ".zshrc" ".vimrc" ".utils" ".aliases" ".tmux.conf" ".gitconfig" ".pylintrc") 
-dirs=(".oh-my-zsh" ".oh-my-bash")
-
-# backup and link all dotfiles under home
-for file in "${files[@]}"
-do
-    mv --backup=t ~/"${file}" ~/"${file}.${NOW}"
-    ln -s "${PWD}"/"${file}" ~/"${file}"
-done
-
-for dir in "${dirs[@]}"
-do
-    mv --backup=t ~/"${dir}" ~/"${dir}.${NOW}"
-    ln -s "${PWD}"/"${dir}" ~/"${dir}"
-done
-touch ~/.local
-
-echo -e "installation completed"
+echo -e "Just friendly reminder, you need to install ssh key"

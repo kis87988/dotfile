@@ -154,7 +154,7 @@ source $OSH/oh-my-bash.sh
 #   exec zsh
 # fi
 
-[ -f "$WORKDIR"/.utils ] && source "$WORKDIR"/.utils
+[ -f "$WORKDIR"/.userconfig ] && source "$WORKDIR"/.userconfig
 
 # include .local if it exists
 [ -f "$WORKDIR"/.local ] && . "$WORKDIR"/.local

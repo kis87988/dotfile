@@ -1,3 +1,7 @@
+[include]
+	path = .gituser-default
+[includeIf "gitdir:~/Workspace/"]
+	path = .gituser-work
 [pager]
 	branch = false
 	diff = false
